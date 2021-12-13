@@ -7,7 +7,7 @@ export class UserController {
   private userService: UserService; 
 
   constructor(){
-    this.userService = new UserService(); // Create a new instance of UserController
+    this.userService = new UserService(); 
     this.router = Router();
     this.routes();
   }
@@ -40,9 +40,7 @@ export class UserController {
     const user = await this.userService.findOne(+id)
     res.send(user).json();
   }
-  /**
-   * Configure the routes of controller
-   */
+
   public routes(){
     this.router.get('/', this.index);
     this.router.get('/:id', this.findOne)

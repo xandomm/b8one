@@ -10,7 +10,7 @@ class Server {
 
   
   constructor(){
-    this.app = express(); // init the application
+    this.app = express(); 
     this.configuration();
     this.routes();
   }
